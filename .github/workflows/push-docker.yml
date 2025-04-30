@@ -23,13 +23,4 @@ jobs:
         uses: docker/setup-buildx-action@v3
       - 
         name: Get version
-        run: echo "PACKAGE_VERSION=$(grep '__version__' qqmusic_api/__init__.py | awk -F'\"' '{print $2}')" >> $GITHUB_ENV
-      -
-        name: Build and push
-        uses: docker/build-push-action@v6
-        with:
-          file: Dockerfile
-          push: true
-          tags: |
-            ${{ secrets.DOCKERHUB_USERNAME }}/qq-music-api:latest
-            ${{ secrets.DOCKERHUB_USERNAME }}/qq-music-api:v${{ env.PACKAGE_VERSION }}
+        run: ls -l
