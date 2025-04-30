@@ -1,0 +1,35 @@
+name: push-docker
+
+on:
+  push:
+    branches:
+      - dev # 触发工作流的分支
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      -
+        name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+      -
+        name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      - 
+        name: Get version
+        run: echo "PACKAGE_VERSION=$(grep '__version__' qqmusic_api/__init__.py | awk -F'\"' '{print $2}')" >> $GITHUB_ENV
+      -
+        name: Build and push
+        uses: docker/build-push-action@v6
+        with:
+          file: Dockerfile
+          push: true
+          tags: |
+            ${{ secrets.DOCKERHUB_USERNAME }}/qq-music-api:latest
+            ${{ secrets.DOCKERHUB_USERNAME }}/qq-music-api:v${{ env.PACKAGE_VERSION }}
