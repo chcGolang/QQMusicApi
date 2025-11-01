@@ -5,7 +5,7 @@ authors = [
   { name = "Luren", email = "68656403+luren-dc@users.noreply.github.com" },
 ]
 dependencies = [
-  "cryptography>=44.0.1,<44.0.2",
+  "cryptography>=45.0.5,<45.0.6",
   "typing-extensions>=4.12.2",
   "httpx[http2]>=0.27.0",
   "aiocache>=0.12.3",
@@ -26,7 +26,7 @@ classifiers = [
   "Framework :: aiohttp",
   "Programming Language :: Python",
   "Programming Language :: Python :: 3 :: Only",
-  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
   "Programming Language :: Python :: Implementation :: CPython",
   "Topic :: Software Development :: Libraries :: Python Modules",
 ]
@@ -55,7 +55,7 @@ path = "qqmusic_api/__init__.py"
 packages = ["qqmusic_api"]
 
 [tool.hatch.build.targets.sdist]
-include = ["/qqmusic_api", "/tests", "LISENCE", "README.md"]
+include = ["/qqmusic_api", "/tests", "LICENSE", "README.md"]
 
 [dependency-groups]
 testing = [
@@ -81,7 +81,7 @@ web = [
 [tool.commitizen]
 name = "cz_gitmoji"
 
-[tool.basedpyright]
+[tool.pyright]
 venvPath = "."
 venv = ".venv"
 include = ["qqmusic_api"]
@@ -104,10 +104,9 @@ extend-select = [
   "ASYNC",
   "C4",
   "FURB",
-  "R",
   "PERF",
 ]
-ignore = ["D105", "D107", "D205", "D415"]
+ignore = ["D105", "D107", "D205", "D415", "RUF029"]
 pydocstyle = { convention = "google" }
 
 [tool.ruff.lint.per-file-ignores]

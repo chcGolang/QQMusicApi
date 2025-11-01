@@ -5,14 +5,14 @@
     <a href="https://www.python.org">
         <img src="https://img.shields.io/badge/Python-3.10|3.11|3.12|3.13-blue" alt="Python">
     </a>
-    <a href="https://github.com/luren-dc/QQMusicApi?tab=MIT-1-ov-file">
-        <img src="https://img.shields.io/github/license/luren-dc/QQMusicApi" alt="GitHub license">
+    <a href="https://github.com/l-1124/QQMusicApi?tab=MIT-1-ov-file">
+        <img src="https://img.shields.io/github/license/l-1124/QQMusicApi" alt="GitHub license">
     </a>
-    <a href="https://github.com/luren-dc/QQMusicApi/stargazers">
-        <img src="https://img.shields.io/github/stars/luren-dc/QQMusicApi?color=yellow&label=Github%20Stars" alt="STARS">
+    <a href="https://github.com/l-1124/QQMusicApi/stargazers">
+        <img src="https://img.shields.io/github/stars/l-1124/QQMusicApi?color=yellow&label=Github%20Stars" alt="STARS">
     </a>
-    <a href="https://github.com/luren-dc/QQMusicApi/actions/workflows/testing.yml">
-        <img src="https://github.com/luren-dc/QQMusicApi/actions/workflows/testing.yml/badge.svg?branch=main" alt="Testing">
+    <a href="https://github.com/l-1124/QQMusicApi/actions/workflows/testing.yml">
+        <img src="https://github.com/l-1124/QQMusicApi/actions/workflows/testing.yml/badge.svg?branch=main" alt="Testing">
     </a>
 </div>
 
@@ -23,9 +23,9 @@
 >
 > **音乐平台不易，请尊重版权，支持正版。**
 
-**文档**: <a href="https://luren-dc.github.io/QQMusicApi" target="_blank">https://luren-dc.github.io/QQMusicApi</a>
+**文档**: <a href="https://l-1124.github.io/QQMusicApi" target="_blank">https://l-1124.github.io/QQMusicApi</a>
 
-**源代码**: <a href="https://github.com/luren-dc/QQMusicApi" target="_blank">https://github.com/luren-dc/QQMusicApi</a>
+**源代码**: <a href="https://github.com/l-1124/QQMusicApi" target="_blank">https://github.com/l-1124/QQMusicApi</a>
 
 ## 介绍
 
@@ -70,7 +70,7 @@ asyncio.run(main())
 
 ## [Web API](./web/README.md)
 
-## Licence
+## License
 
 本项目基于 **[MIT License](https://github.com/luren-dc/QQMusicApi?tab=MIT-1-ov-file)** 许可证发行。
 
