@@ -2,7 +2,7 @@ import logging
 import os
 import sys
 
-from . import album, comment, login, lyric, mv, search, singer, song, songlist, top, user
+from . import album, comment, login, lyric, mv, search, singer, song, songlist, top, user, loginapi
 from .utils.credential import Credential
 from .utils.session import Session, get_session, set_session
 
@@ -33,4 +33,5 @@ __all__ = [
     "songlist",
     "top",
     "user",
+    "loginapi",
 ]
