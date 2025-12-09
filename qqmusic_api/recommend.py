@@ -3,7 +3,7 @@
 from .utils.network import NO_PROCESSOR, api_request
 
 
-@api_request("music.recommend.RecommendFeed", "get_recommend_feed", cache_ttl=5*60)
+@api_request("music.recommend.RecommendFeed", "get_recommend_feed")
 async def get_home_feed():
     """获取主页推荐"""
     return {
@@ -13,7 +13,7 @@ async def get_home_feed():
     }, NO_PROCESSOR
 
 
-@api_request("music.radioProxy.MbTrackRadioSvr", "get_radio_track", cache_ttl=5*60)
+@api_request("music.radioProxy.MbTrackRadioSvr", "get_radio_track")
 async def get_guess_recommend():
     """获取猜你喜欢"""
     return {
@@ -27,7 +27,7 @@ async def get_guess_recommend():
     }, NO_PROCESSOR
 
 
-@api_request("music.recommend.TrackRelationServer", "GetRadarSong", cache_ttl=5*60)
+@api_request("music.recommend.TrackRelationServer", "GetRadarSong")
 async def get_radar_recommend():
     """获取雷达推荐"""
     return {
@@ -40,13 +40,13 @@ async def get_radar_recommend():
     }, NO_PROCESSOR
 
 
-@api_request("music.playlist.PlaylistSquare", "GetRecommendFeed", cache_ttl=5*60)
+@api_request("music.playlist.PlaylistSquare", "GetRecommendFeed")
 async def get_recommend_songlist():
     """获取推荐歌单"""
     return {"From": 0, "Size": 25}, NO_PROCESSOR
 
 
-@api_request("newsong.NewSongServer", "get_new_song_info", cache_ttl=5*60)
+@api_request("newsong.NewSongServer", "get_new_song_info")
 async def get_recommend_newsong():
     """获取推荐新歌"""
     return {"type": 5}, NO_PROCESSOR
