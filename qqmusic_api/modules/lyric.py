@@ -48,3 +48,24 @@ class LyricApi(ApiModule):
             param=params,
             response_model=GetLyricResponse,
         )
+
+    async def get_decrypted_lyric(
+        self,
+        value: int | str,
+        *,
+        qrc: bool = False,
+        trans: bool = False,
+        roma: bool = False,
+    ) -> GetLyricResponse:
+        """获取解密后的歌词.
+
+        Args:
+            value: 歌曲 ID 或 MID.
+            qrc: 是否获取逐字歌词.
+            trans: 是否获取翻译.
+            roma: 是否获取罗马音.
+
+        Returns:
+            GetLyricResponse: 歌词内容已解密的响应对象.
+        """
+        return (await self.get_lyric(value, qrc=qrc, trans=trans, roma=roma)).decrypt()

@@ -7,4 +7,5 @@ from ._helpers import LYRIC_OPTIONS, VALUE, R
 
 ROUTES: tuple[WebRoute, ...] = (
     R("lyric", "get_lyric", "/song/{value}/lyric", GetLyricResponse, params=(*VALUE, *LYRIC_OPTIONS), cache=PUBLIC_300),
+    R("lyric", "get_decrypted_lyric", "/song/{value}/decrypted_lyric", GetLyricResponse, params=(*VALUE, *LYRIC_OPTIONS), cache=PUBLIC_300),
 )
